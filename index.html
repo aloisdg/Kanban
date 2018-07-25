@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Libre Kanban Board</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<!-- 
+Column {
+    title: string
+    fontFamily: string
+    titleBackground: string
+    titleForeground: string
+    textBackground: string
+    textForeground: string
+    columns: column[] //ordered
+} -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            display: flex;
+            /* full width by default */
+            min-height: 100vh;
+            /* use full height of viewport, at a minimum */
+            width: 100%;
+            font-family: 'Raleway', sans-serif;
+        }
+    
+        #grid {
+            display: grid;
+            grid-template-rows: 10vh 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            height: 1fr;
+            width: 100%;
+        }
+    
+        #grid>div {
+            color: white;
+            font-size: 3.8vw;
+            background-color: #fafafb;
+        }
+    
+        #grid>div.header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div class="header">To Do</div>
+        <div class="header">In Progress</div>
+        <div class="header">Done</div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
